@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Panel Pterodactyl Murah</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0e1013;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #1f1f1f;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 10px #00c3ff60;
+    }
+
+    header h1 {
+      color: #00c3ff;
+      margin: 0;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+
+    .container {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .catalog {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #1a1a1a;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 10px #00c3ff30;
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card h3 {
+      color: #00c3ff;
+    }
+
+    .card p {
+      margin: 10px 0;
+    }
+
+    .buy-btn {
+      background-color: #00c3ff;
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    footer {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+      color: #666;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Panel Pterodactyl Murah</h1>
+    <nav>
+      <a href="#catalog">Katalog</a>
+      <a href="#contact">Kontak</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section class="intro">
+      <h2>Panel Hosting Privet Yang Pastinya Awet Dan Tahan Lama</h2>
+      <p>Stabil, murah, dan support 24/7. Cocok buat Bot Whatsapp</p>
+    </section>
+
+    <section id="catalog" class="catalog">
+      <script>
+        const whatsapp = "6281292466503"; // GANTI nomor WhatsApp lo di sini
+        const catalog = document.currentScript.parentElement;
+
+        for (let i = 2; i <= 10; i++) {
+          const ram = `${i}GB`;
+          const cpu = `${i * 20}%`;
+          const storage = `${i * 5} GB`;
+          const price = `Rp${i}.000`;
+          const msg = encodeURIComponent(`Halo kak, saya mau order panel ${ram} (CPU ${cpu}, ${storage}) seharga ${price}`);
+          const html = `
+            <div class="card">
+              <h3>${ram} RAM</h3>
+              <p>CPU ${cpu}<br>Storage ${storage}<br>Lokasi: SG</p>
+              <p><strong>${price} / bulan</strong></p>
+              <a href="https://wa.me/${whatsapp}?text=${msg}" class="buy-btn" target="_blank">Beli Sekarang</a>
+            </div>
+          `;
+          catalog.insertAdjacentHTML('beforeend', html);
+        }
+
+        // Unlimited Package
+        const msgUnlimited = encodeURIComponent("Halo kak, saya mau order panel Unlimited RAM & CPU seharga Rp11.000.");
+        catalog.insertAdjacentHTML('beforeend', `
+          <div class="card">
+            <h3>Unlimited RAM</h3>
+            <p>CPU Unlimited<br>Storage Unlimited<br>Lokasi: SG</p>
+            <p><strong>Rp11.000 / bulan</strong></p>
+            <a href="https://wa.me/${whatsapp}?text=${msgUnlimited}" class="buy-btn" target="_blank">Beli Sekarang</a>
+          </div>
+        `);
+      </script>
+    </section>
+
+    <section id="contact" style="text-align: center; margin-top: 60px;">
+      <h2>Hubungi Kami</h2>
+      <p>Whatsapp: <a href="https://wa.me/7281292466503" style="color: #00c3ff;">+62 812-9246-6503</a></p>
+      <p>Telegram: <a href="https://t.me/tedzwangsaf" style="color: #00c3ff;">@tedzwangsaf</a></p>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 PanelPteroStore. All rights reserved.
+  </footer>
+</body>
+</html>
